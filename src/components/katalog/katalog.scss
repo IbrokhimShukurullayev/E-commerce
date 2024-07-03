@@ -1,0 +1,102 @@
+.katalog {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+    @media (min-width: 700px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    h2 {
+      color: rgba(69, 69, 69, 1);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 54.64px;
+      text-align: left;
+    }
+    a {
+      height: 50px;
+      width: 220px;
+      color: rgb(69, 69, 69);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: -1px;
+      letter-spacing: 0%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid rgb(69, 69, 69);
+      border-radius: 100px;
+      &:hover {
+        svg {
+          transform: translate(15px);
+        }
+      }
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(1, 360px);
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0 50px 0;
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(2, 420px);
+    }
+    @media (min-width: 1100px) {
+      grid-template-columns: repeat(3, 420px);
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 37px;
+    border-radius: 20px;
+    transition: 0.3s;
+    background: rgb(242, 242, 242);
+    &__left {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      //   padding: 32px 0 32px 32px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #454545;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 15.4px;
+        color: #454545;
+        svg {
+          font-size: 15px;
+          transition: 0.3s;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  &__card:nth-child(3) {
+    img {
+      width: 250px;
+    }
+  }
+  &__card:hover {
+    // background-color: #dbdbdd;
+    svg {
+      transform: translate(15px);
+    }
+  }
+}
