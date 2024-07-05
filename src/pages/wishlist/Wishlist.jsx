@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 // import Empty from '../../components/empty/Empty'
 import CardProducts from '../../components/card-products/CardProducts'
+import Empty from '../../components/empty/Empty'
 
 
 const Wishlist = () => {
@@ -36,7 +37,7 @@ const Wishlist = () => {
                                         category={el.category}
                                     />))
                             }
-                        </div> : <></>
+                        </div> : <Empty/>
                     }
                 </div>
             </section>

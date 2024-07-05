@@ -3,8 +3,13 @@ import "./footer.scss"
 
 import logo from "../../assets/images/logo.png"
 import visa from "../../assets/images/visa.png"
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
+  let { pathname } = useLocation();
+    if (pathname.includes("/admin")) {
+        return <></>;
+    }
   return (
     <footer id="footer">
       <div className="container footer">

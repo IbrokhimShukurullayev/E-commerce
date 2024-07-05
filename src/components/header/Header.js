@@ -1,6 +1,6 @@
 import React , {useState , useEffect , memo} from 'react'
 import "./header.scss"
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import { HiOutlineMenuAlt1  } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
@@ -15,6 +15,9 @@ const Header = () => {
 
     const [isShirnk, setIsShirnk] = useState(false);
     const wishlist = useSelector(state => state.wishlist.value)
+    const cart = useSelector(state => state.cart.value)
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,6 +34,11 @@ const Header = () => {
         window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    let { pathname } = useLocation();
+    if (pathname.includes("/admin")) {
+        return <></>;
+    }
   return (
     <header id='header' className={isShirnk ? 'header navbar-shirnk' : 'header'}>
         <nav className="container nav">
@@ -73,7 +81,7 @@ const Header = () => {
                     <NavLink to={"/cart"} className="nav__cart">
                         <FiShoppingCart/>
                         <p>Корзина</p>
-                        <span>0</span>
+                        <span>{cart.length}</span>
                     </NavLink>
                 </div>
             </div>

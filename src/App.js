@@ -15,6 +15,10 @@ import Return from './pages/return/Return';
 import NotFound from './components/404/NotFound';
 import Garant from './pages/garants/Garants';
 import DeliveryPayment from './pages/deliveryPayment/DeliveryPayment';
+import CreateProduct from './pages/admin/create-product/CreateProduct';
+import ManageProduct from './pages/admin/manage-product/ManageProduct';
+import CreateCategory from './pages/admin/create-category/CreateCategory';
+import ManageCategory from './pages/admin/manage-category/ManageCategory';
 
 
 function App() {
@@ -33,9 +37,14 @@ function App() {
         <Route path="/garants" element={<Garant />} />
         <Route path="/payment" element={<DeliveryPayment />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Auth />} >
-          <Route path="/admin" element={<Admin />} />
-        </Route>
+        <Route path="/" element={<Auth />}>
+            <Route path="/admin" element={<Admin />}>
+              <Route path="create-product" element={<CreateProduct />} />
+              <Route path="manage-product" element={<ManageProduct />} />
+              <Route path="create-category" element={<CreateCategory />} />
+              <Route path="manage-category" element={<ManageCategory />} />
+            </Route>
+          </Route>
       </Routes>
       <Footer/>
     </div>
