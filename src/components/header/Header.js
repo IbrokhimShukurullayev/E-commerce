@@ -89,7 +89,7 @@ const Header = () => {
                                         <NavLink
                                             onClick={() => setSearchValue("")}
                                             key={el.id}
-                                            to={`/single-product/${el.id}`}
+                                            to={`/single/${el.id}`}
                                             className="nav__search__item"
                                         >
                                             <p>{el.title}</p>
