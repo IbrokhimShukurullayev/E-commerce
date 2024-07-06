@@ -19,6 +19,7 @@ import CreateProduct from './pages/admin/create-product/CreateProduct';
 import ManageProduct from './pages/admin/manage-product/ManageProduct';
 import CreateCategory from './pages/admin/create-category/CreateCategory';
 import ManageCategory from './pages/admin/manage-category/ManageCategory';
+import Single from './components/single/Single';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/single/:id" element={<Single />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
         <Route path="/return" element={<Return />} />

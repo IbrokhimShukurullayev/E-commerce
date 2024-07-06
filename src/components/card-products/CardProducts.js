@@ -21,7 +21,7 @@ const CardProducts = ({ id, title, price, oldPrice, image, category, el }) => {
                 }
             </button>
             <div className="card__frame">
-                <Link to={`/single-product/${id}`}>
+                <Link to={`/single/${id}`}>
                     <img src={image} alt="" />
                 </Link>
             </div>
