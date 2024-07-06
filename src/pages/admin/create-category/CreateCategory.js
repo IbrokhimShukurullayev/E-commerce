@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import "./CreateCategory.scss"
 import { useCreateCategoryMutation } from '../../../context/categoryApi'
 import Loading from '../../../components/loading/Loading'
-import { toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react'
 
 const CreateCategory = () => {
@@ -51,6 +52,7 @@ const CreateCategory = () => {
                     </form>
                 </div>
             </section>
+            <ToastContainer/>
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react'
 import "./login.scss"
-  import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useGetInputValuen } from '../../hooks/useGetInputValue'
 

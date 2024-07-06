@@ -5,7 +5,7 @@ export const categoryApi = api.injectEndpoints({
         // Get request
         getCategory: build.query({
             query: (params) => ({
-                url: '/categories',
+                url: '/category',
                 params
             }),
             providesTags: ["Category"]
@@ -13,7 +13,7 @@ export const categoryApi = api.injectEndpoints({
         // Post request
         createCategory: build.mutation({
             query: (body) => ({
-                url: "/categories",
+                url: "/category",
                 method: "POST",
                 body
             }),
@@ -22,7 +22,7 @@ export const categoryApi = api.injectEndpoints({
         // Delete request
         deleteCategory: build.mutation({
             query: (id) => ({
-                url: `/categories/${id}`,
+                url: `/category/${id}`,
                 method: "DELETE"
             }),
             invalidatesTags: ["Category"]
@@ -30,7 +30,7 @@ export const categoryApi = api.injectEndpoints({
         // Updatet request
         updateCategory: build.mutation({
             query: ({ body, id }) => ({
-                url: `/categories/${id}`,
+                url: `/category/${id}`,
                 method: "PUT",
                 body
             }),
